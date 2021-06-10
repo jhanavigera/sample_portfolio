@@ -95,3 +95,174 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
+
+/*NAVBAR*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 40px;
+    overflow: hidden;
+    background-color: #333;
+}
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  float: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav {
+    background-color: rgb(0, 207, 111);
+    overflow: hidden;
+    font-size: 50px;
+    font-family: "Roboto", serif;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #000066;
+  text-align: center;
+  padding: 21px 24px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgb(0, 133, 27);
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+p {
+    color:#000033;
+    font-family: "Roboto", serif;
+}
+
+#greeting-container {
+  margin-top: 60px;
+}
+
+
+/* PROJECTS */
+
+.work{
+    position: relative;
+    text-align: center;
+}
+
+.work .projectsTitle {
+    font-size: 3.1vw;
+    color: #4d1a00;
+    position: absolute;
+    top: 8%;
+    left: 40%;
+}
+
+.projects-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+.projects-content h1 {
+    margin-bottom: 1%;
+    color: black;
+}
+
+.projects-content h6 {
+    font-size: 1vw;
+    margin-bottom: 6%;
+}
+
+.projects-content a:link {
+    color:rgb(0, 183, 255);;
+}
+
+.projects-content a:visited {
+    color: rgb(0, 183, 255);
+}
+
+.projects-content a:hover {
+    color:rgb(0, 183, 255);
+    text-decoration: underline;
+}
+
+.codetag {
+    position: relative;
+    border-radius: 30px 30px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(13, 0, 48);
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-right: 4%;
+    padding-left: 4%;
+}
+
+.codelink {
+    margin-top: 6%;
+    margin-left: 3%;
+    position: relative;
+    width: 12%;
+}
+
+
+.projectBox {
+    position: relative;
+    width: 20%;
+    height: 18%;
+    background: #404040;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 20px;
+    box-shadow: -10px 10px 1px #8c8c8c;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    display: inline-block;
+}
+
+.portfolio {
+    position: absolute;
+    width: 20%;
+    left: 10%;
+    top: 120%;
+    background: #404040;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 20px;
+    box-shadow: -10px 10px 1px #8c8c8c;
+}
