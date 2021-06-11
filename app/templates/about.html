@@ -2,34 +2,102 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width,initial-scale=1" name="viewport" />
+  <meta content="description" name="description" />
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+  <!-- Disable tap highlight on IE -->
 
-    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
-    <title>{{ title }}</title>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='main1.css') }}" />
 </head>
 
-<body>
-    <div class="topnav">
-        <a href="/">MLH Fellow</a>
-        <a class="active" href="/about">About Me</a>
-        <a href="/projects">Projects</a>
-        <a href="/contact">Contact</a>         
-        <div class="topnav-right">
-            <a href="https://www.linkedin.com/in/gabriel-escobar-saade-13b8b01a0/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/gabriel-esco" target="_blank">GitHub</a>
-        </div>
-    </div>
+<body class="">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
+  <!-- Add your content of header -->
+  <header>
+    <nav class="navbar  navbar-fixed-top navbar-default">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-    
+      </div>
+    </nav>
+  </header>
+
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-container-spacer text-center">
+            <h1 class="h2">About me</h1>
+          </div>
+
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <h3>Hello !</h3>
+                  <p>
+                    I am a software developer with a passion for creating
+                    complex software solutions.
+                  </p>
+                  <h3>Educational Background</h3>
+                  <p>
+                    I completed my Masters in Computer Sciencefrom Cornell University. I did my Bachelors in Mathematics from University of Washington. 
+                  </p>
+                  <h3>Skills</h3>
+                  <p>
+                    I am good with Python, C++, C, java.
+                  </p>
+
+                </div>
+                <div class="col-xs-12 col-md-5" style="padding: 40px;">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/portfolio-flask.appspot.com/o/profil.jpg?alt=media&token=72b30c0f-3083-4391-889c-f0beed5a901c"
+                    class="img-responsive" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navActivePage();
+    });
+  </script> -->
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+-->
+  <!-- <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script> -->
 </body>
+
+</html>
