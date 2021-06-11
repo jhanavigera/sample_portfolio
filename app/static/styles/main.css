@@ -173,22 +173,8 @@ p {
 
 /* PROJECTS */
 
-.work{
-    position: relative;
-    text-align: center;
-}
-
-.work .projectsTitle {
-    font-size: 3.1vw;
-    color: #4d1a00;
-    position: absolute;
-    top: 8%;
-    left: 40%;
-}
-
 .projects-content {
     position: relative;
-    top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 10px;
@@ -241,13 +227,13 @@ p {
     position: relative;
     width: 20%;
     height: 18%;
-    background: #404040;
+    background: rgba(29, 83, 159);
     padding-top: 20px;
     padding-bottom: 35px;
     padding-left: 35px;
     padding-right: 35px;
     border-radius: 20px;
-    box-shadow: -10px 10px 1px #8c8c8c;
+    box-shadow: -10px 10px 1px rgba(29, 83, 159, 0.5);
     margin-right: 2%;
     margin-left: 2%;
     margin-bottom: 5%;
