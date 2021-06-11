@@ -296,10 +296,11 @@ p {
   form label {
     
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 350;
+    color: white;
     display: block;
     padding: 10px 0px ;
-    
+    font-family: Arial, Helvetica, sans-serif;
     position: relative;
     left: 37%;
   }
@@ -344,6 +345,6 @@ p {
     width: 100%;
     text-align: center;
     margin-top: 10px;
-    color: black;
+    color: white;
   }
 
