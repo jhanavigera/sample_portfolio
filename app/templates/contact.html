@@ -26,41 +26,33 @@
           <a href="/projects">Projects</a>
           <a class="active" href="/contact">Contact</a>         
           <div class="topnav-right">
-              <a href="https://www.linkedin.com/in/gabriel-escobar-saade-13b8b01a0/" target="_blank">LinkedIn</a>
-              <a href="https://github.com/gabriel-esco" target="_blank">GitHub</a>
-          </div>
+            <a href="https://www.linkedin.com" target="_blank"><img src="./static/img/linkedin.png" width=21 height=20 alt="alternate_text"></a>
+            <a href="https://github.com/" target="_blank"><img src="./static/img/github.png" width=21 height=20 alt="alternate_text"></a>
+        </div>
       </div>
   </body>
   
-  
-
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <title>Contact</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-  </head>
-  <body>
 
     <header>
       <div class="container">
         <h1 class="logo">
-            <center>  Contact Me </center>
+          <div class = "contact_header">
+              Contact Me 
+          </div>
         </h1>
       </div>
     </header> 
 
     <div class="container">
 
-  <h3><center>Feel free to drop me an email!</center></h3>
+  <h3><div class = "contact_header">Feel free to drop me an email!</div></h3>
  
   {% for message in form.name.errors %}
     <div class="flash">{{ message }}</div>
   {% endfor %}
  
   {% for message in form.email.errors %}
-  <center> <div class="flash">{{ message }}</div> </center>
+  <center> <div class="flash" style = "color:firebrick">{{ message }}</div> </center>
   {% endfor %}
  
   {% for message in form.subject.errors %}
@@ -74,17 +66,17 @@
   <form action="{{ url_for('contact') }}" method=post>
     {{ form.hidden_tag() }}
  
-    <center>{{ form.name.label }}
-    {{ form.name }}</center><br>
+    {{ form.name.label }}
+    {{ form.name }}<br>
  
-    <center>{{ form.email.label }}
-    {{ form.email }}</center><br>
+   {{ form.email.label }}
+   {{ form.email }}<br>
  
-    <center>{{ form.subject.label }}
-    {{ form.subject }}</center><br>
+    {{ form.subject.label }}
+    {{ form.subject }}<br>
  
-    <center>{{ form.message.label }}
-    {{ form.message }}</center><br>
+    {{ form.message.label }}
+   {{ form.message }}<br>
  
     <center>{{ form.submit }}</center><br>
   </form>

@@ -30,7 +30,7 @@ def contact():
             flash('All fields are required.')
             return render_template('contact.html', form=form)
         else:
-            return 'Form posted.'
+            return 'Form submitted.'
  
     elif request.method == 'GET':
         return render_template('contact.html', form=form)
@@ -38,7 +38,7 @@ def contact():
  
 class ContactForm(Form):
   name = TextField("Name",  [validators.Required("Please enter your name.")])
-  email = TextField("Email",  [validators.Required("Please enter your email address."), validators.Email("Please enter your email address.")])
+  email = TextField("Email",  [validators.Required("Please enter your email address."), validators.Email("Please enter a valid email address")])
   subject = TextField("Subject",  [validators.Required("Please enter a subject.")])
   message = TextAreaField("Message",  [validators.Required("Please enter a message.")])
   submit = SubmitField("Send")
