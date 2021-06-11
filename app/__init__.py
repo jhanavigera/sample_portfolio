@@ -8,7 +8,6 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = 'development identification key'
 
-
 @app.route('/')
 def index():
     return render_template('home.html', title="MLH Fellow", url=os.getenv("URL"))
@@ -20,6 +19,7 @@ def projects():
 @app.route('/about')
 def about():
     return render_template('about.html', title="About", url=os.getenv("URL"))
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
