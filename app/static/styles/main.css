@@ -1,9 +1,13 @@
 p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
+    /* text-align: right; */
 }
-
+.container {
+    text-align: center;
+    font-size: 25px;
+}
 body {
-    background-color: #f5f5f9;
+    background-color: rgb(200,200,250);
     background-size: cover;
     width: auto; 
     overflow-x: hidden;
@@ -12,7 +16,7 @@ body {
 }
 
 .nav-bar {
-    width: 100%;
+    width: 100%;ß
     display: inline-block;
     background-color: #1C539F;
     font-family: "Roboto", serif;
@@ -342,3 +346,4 @@ p {
     margin-top: 10px;
     color: black;
   }
+
