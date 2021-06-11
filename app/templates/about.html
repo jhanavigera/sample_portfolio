@@ -7,54 +7,46 @@
   <meta content="width=device-width,initial-scale=1" name="viewport" />
   <meta content="description" name="description" />
   <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author" />
 
   <!-- Disable tap highlight on IE -->
-
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='main1.css') }}" />
+  <link rel="stylesheet" type="text/css" href="static/styles/m.css" />
+  <!-- <link lang='sass' rel="stylesheet" href="./static/styles/main.css"> -->
 </head>
 
-<body class="">
-  <div id="site-border-left"></div>
-  <div id="site-border-right"></div>
-  <div id="site-border-top"></div>
-  <div id="site-border-bottom"></div>
-  <!-- Add your content of header -->
-  <header>
-    <nav class="navbar  navbar-fixed-top navbar-default">
-      <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
-          aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-      </div>
-    </nav>
-  </header>
+<body>
+    <div class="topnav">
+        <a class="active" href="#">MLH Fellow</a>
+        <a href="/about">About Me</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>         
+        <div class="topnav-right">
+            <a href="https://www.linkedin.com/in/gabriel-escobar-saade-13b8b01a0/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/gabriel-esco" target="_blank">GitHub</a>
+        </div>
+    </div>
 
   <div class="section-container">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <div class="section-container-spacer text-center">
-            <h1 class="h2">About me</h1>
+          <div class="f">
+            <h1>About me</h1>
           </div>
 
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
               <div class="row">
                 <div class="col-xs-12 col-md-6">
-                  <h3>Hello !</h3>
+                  <h3 >
+                      Hello there!</h3>
+                    </h3>
                   <p>
                     I am a software developer with a passion for creating
-                    complex software solutions.
+                    developing software solutions for solving complex problems.
                   </p>
                   <h3>Educational Background</h3>
                   <p>
-                    I completed my Masters in Computer Sciencefrom Cornell University. I did my Bachelors in Mathematics from University of Washington. 
+                    I completed my Masters in Computer Science from Columbia University. I did my Bachelors in Mathematics from University of Washington. 
                   </p>
                   <h3>Skills</h3>
                   <p>
@@ -62,11 +54,16 @@
                   </p>
 
                 </div>
-                <div class="col-xs-12 col-md-5" style="padding: 40px;">
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/portfolio-flask.appspot.com/o/profil.jpg?alt=media&token=72b30c0f-3083-4391-889c-f0beed5a901c"
-                    class="img-responsive" alt="" />
-                </div>
+                <h1 class="text-xl font-semibold rounded-sm mt-4 mb-2">Using these technologies</h1>
+      <!-- <div class="w-full lg:w-4/5 flex flex-wrap text-sm font-medium px-2 py-1 my-auto border-gray-400 border-l-4 rounded-sm text-gray-100 cursor-default">
+        
+        <span class="w-full min-w-max m-0.5 px-4 py-0.5 bg-blue-500 bg-opacity-90 hover:bg-opacity-100 rounded-sm"> Python </span>
+        <span class="w-2/3 min-w-max; m-0.5;px-4 py-0.5 bg-gray-700 bg-opacity-90 hover:bg-opacity-100 rounded-sm"> Java </span>
+        <span class="w-1/4 min-w-max m-0.5 px-4 py-0.5 bg-gray-700 bg-opacity-90 hover:bg-opacity-100 rounded-sm"> Flask </span>
+        
+      </div> -->
+
+                
               </div>
             </div>
           </div>
@@ -75,6 +72,7 @@
     </div>
   </div>
 
+  
   
 
   <!-- <script>
