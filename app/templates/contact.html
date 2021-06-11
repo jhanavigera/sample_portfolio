@@ -1,6 +1,7 @@
 
 <html lang="en">
 
+  
   <head>
       <!-- Required meta tags -->
       <meta charset="utf-8">
@@ -17,6 +18,7 @@
       <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
       <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
       <title>{{ title }}</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   </head>
   
   <body>
@@ -30,6 +32,7 @@
             <a href="https://github.com/gabriel-esco" target="_blank"><img src="./static/img/github.png" width=21 height=20 alt="alternate_text"></a>
         </div>
       </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
   
   
@@ -39,10 +42,13 @@
 <html>
   <head>
     <title>Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
   <body>
 
+    <div class = "row my-custom-row justify-content-evenly align-items-center">
+ 
     <header>
       <div class="container">
         <h1 class="logo">
@@ -55,7 +61,7 @@
 
     <div class="container">
 
-  <h3><div class = "contact_header">Feel free to drop me an email!</div></h3>
+  <h4><div class = "contact_header">Feel free to drop me an email!</div></h4>
  
   {% for message in form.name.errors %}
     <div class="flash">{{ message }}</div>
@@ -73,26 +79,66 @@
     <div class="flash">{{ message }}</div>
   {% endfor %}
    
-  <form action="{{ url_for('contact') }}" method=post>
+   <form action="{{ url_for('contact') }}" method=post>
     {{ form.hidden_tag() }}
  
-    {{ form.name.label }}
-    {{ form.name }}<br>
+    <div class="col-sm-6 col-md-6 col-lg-6">{{ form.name.label }}
+    {{ form.name }}<br></div>
  
-   {{ form.email.label }}
-   {{ form.email }}<br>
+    <div class="col-sm-6 col-md-6 col-lg-6">{{ form.email.label }}
+   {{ form.email }}<br></div>
  
-    {{ form.subject.label }}
-    {{ form.subject }}<br>
+   <div class="col-sm-6 col-md-6 col-lg-6">{{ form.subject.label }}
+    {{ form.subject }}<br></div>
  
-    {{ form.message.label }}
-   {{ form.message }}<br>
+    <div class="col-sm-6 col-md-6 col-lg-6">{{ form.message.label }}
+   {{ form.message }}<br></div>
  
-    <center>{{ form.submit }}</center><br>
+  <center>{{ form.submit }}<br></center>
+  
   </form>
-
 </div>
 
+
+  <style>
+    .my-custom-row{
+      background-color: #1d539f;
+      align-self: center;
+      border-radius: 5%;
+      height: 600px;
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2%;
+      margin-bottom:0% ;
+    }
+  </style>
+<!--
+  Notes for bootstrap: 
+  <div class="container">
+      <div class = "row">
+        <div class="col-sm-4 col-md-6 col-lg-2"> Col one </div>
+        <div class="col-sm-8 col-md-6 col-lg-8"> Col two </div>
+        </div>
+  </div>
+
+  <div class = "row">
+    <div class="col-sm-6 order-md-2"> Col one </div>
+    <div class="col-sm-6 order-md-1"> Col two </div>
+    </div>
+
+    <div class = "row">
+      <div class="col-sm-4 offset 5"> Col one </div>
+      <div class="col-sm-4"> Col two </div>
+      </div>
+
+      <div class = "row my-custom-row justify-content-center align-items-center">
+        <div class="col-sm-4 "><div class="p-3 border bg-light">Col</div></div>
+        <div class="col-sm-4"> Col two </div>
+        </div>
+
+      -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
 
