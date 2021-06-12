@@ -8,7 +8,7 @@ p, h1, h2, h3, h4, h5, h6, button {
 }
 body {
 
-    background-color: blue;
+    background-color: rgb(230, 223, 168);
     background-size: cover;
     width: auto; 
     overflow-x: hidden;
@@ -95,10 +95,11 @@ body {
         text-align: center;
         font-size: 50px;
         font-weight: 700;
+        color: black;
 }
 
 .profile h2 {
-    color: white;
+    color: black;
 }
 
 .profile h3 {
@@ -273,7 +274,7 @@ p {
     position: relative;
     width: 20%;
     height: 18%;
-    background: rgba(29, 83, 159);
+    background: rgb(13, 82, 39);
     padding-top: 20px;
     padding-bottom: 35px;
     padding-left: 35px;
