@@ -7,16 +7,17 @@ p, h1, h2, h3, h4, h5, h6, button {
     font-size: 25px;
 }
 body {
-    background-color: rgb(200,200,250);
+    background-color: blue;
     background-size: cover;
     width: auto; 
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
+    height: 100%;
 }
 
 .nav-bar {
-    width: 100%;ß
+    width: 100%;
     display: inline-block;
     background-color: #1C539F;
     font-family: "Roboto", serif;
@@ -53,17 +54,55 @@ body {
     padding-right: 0px;
 }
 
-.profile {
-    background-color: #1d539f !important;
+.profile { 
+    position: relative;
     text-align: center;
-    height: 320px;
+    height: 100%;
     margin-bottom: 50px;
+    color: white;
+}
+
+.profile button {
+    position: relative;
+    background-color: green;
+    text-decoration: none;
+    background-color: rgb(0, 207, 111); 
+    border-radius: 5%;
+    width: 18%;
+    border: none;
+    color: white;
+    padding: 1% 2%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+.profile button:hover {
+    background-color: green;
+}
+
+.profile .quote {
+    font-size: 2vw;
+    color: black;
+    padding-top: 50px;
+    text-decoration: wavy;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .profile h1 {
+        text-align: center;
         font-size: 50px;
         font-weight: 700;
-        color: white;
+}
+
+.profile h2 {
+    color: white;
+}
+
+.profile h3 {
+    font-size: 1.5vw;
+    font-weight: 200;
 }
 
 .profile img {
@@ -188,6 +227,8 @@ p {
 .projects-content h1 {
     margin-bottom: 1%;
     color: black;
+    font-size: 3.5vw;
+    padding-bottom: 10px;
 }
 
 .projects-content h6 {
@@ -267,7 +308,7 @@ p {
   form input#email,
   form input#subject {
     width: 400px;
-    background-color: #fafafa;
+    background-color: white;
     -webkit-border-radius: 3px;
        -moz-border-radius: 3px;
             border-radius: 3px;
@@ -287,7 +328,7 @@ p {
             border-radius: 3px;
     border: 1px solid #cccccc;
     margin-bottom: 10px;
-    padding: 5px 10px;
+    padding: 0px 0px;
     font-size: 1.1em;
     position: relative;
     left: 37%;
@@ -299,7 +340,7 @@ p {
     font-weight: 350;
     color: white;
     display: block;
-    padding: 10px 0px ;
+    padding: 0px 0px ;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
     left: 37%;
