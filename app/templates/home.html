@@ -18,7 +18,21 @@
     <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
     <title>{{ title }}</title>
 </head>
+<script>
+    async function findAQuote() {
+    const quotes = ["“All our dreams can come true, if we have the courage to pursue them.” – Walt Disney", 
+                    "“The secret of getting ahead is getting started.” – Mark Twain.",
+                    "“Happiness is not something ready made. It comes from your own actions.” ― Dalai Lama XIV", 
+                    "“Smart people learn from everything and everyone, average people from their experiences, stupid people already have all the answers.” – Socrates"];
 
+    const index = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[index];
+
+    const quoteContainer = document.getElementById('quote-container');
+    quoteContainer.innerText = quote;
+}
+
+</script>
 <body>
     <div class="topnav">
         <a class="active" href="#">MLH Fellow</a>
@@ -26,16 +40,26 @@
         <a href="/projects">Projects</a>
         <a href="/contact">Contact</a>         
         <div class="topnav-right">
-            <a href="https://www.linkedin.com/in/gabriel-escobar-saade-13b8b01a0/" target="_blank"><img src="./static/img/linkedin.png" width=21 height=20 alt="alternate_text"></a>
-            <a href="https://github.com/gabriel-esco" target="_blank"><img src="./static/img/github.png" width= 21 height=20 alt="alternate_text"></a>
+            <a href="https://www.linkedin.com/in/" target="_blank"><img src="./static/img/linkedin.png" width=21 height=20 alt="alternate_text"></a>
+            <a href="https://github.com/" target="_blank"><img src="./static/img/github.png" width= 21 height=20 alt="alternate_text"></a>
         </div>
     </div>
 
     <div class="profile">
+        <h1>{{ title }}</h1>
         <div id="profile-picture" class="profile-picture">
             <img src="./static/img/logo.jpg">
         </div>
-        <h1>{{ title }}</h1>
+        <h2>Software Developer</h2>
+        <div class="button"> 
+            <button class="button" onclick="findAQuote()">Shuffle quotes</button>
+            <a href="/static/img/MLH_Resume.jpeg" download>
+                <button class="resumebutton">My Resume</button>
+            </a>
+        </div>
+        <div class="quote">
+            <div id="quote-container"></div>
+        </div>
     </div>
 </body>
 </html>
