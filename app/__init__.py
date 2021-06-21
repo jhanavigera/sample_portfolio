@@ -20,6 +20,10 @@ def projects():
 def about():
     return render_template('about.html', title="About", url=os.getenv("URL"))
 
+@app.route('/health')
+def health():
+    return render_template('health.html',  title="Health"), 200
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
