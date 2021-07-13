@@ -1,4 +1,4 @@
-name: Lint
+name: docker-build
 
 on:
   push:
