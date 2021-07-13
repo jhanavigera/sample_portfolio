@@ -50,6 +50,7 @@ def index():
 def projects():
     return render_template('projects.html', title="Projects", url=os.getenv("URL"))
 
+
 @app.route('/about')
 def about():
     return render_template('about.html', title="About", url=os.getenv("URL"))
