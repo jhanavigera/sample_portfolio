@@ -134,26 +134,3 @@ def register():
 
 
 # ...
-
-#@app.route("/login", methods=("GET", "POST"))
-#def login():
-    if request.method == "POST":
-        username = request.form.get("username")
-        password = request.form.get("password")
-        # db = get_db()
-        error = None
-        user = UserModel.query.filter_by(username=username).first()
-
-        if user is None:
-            error = "Incorrect username."
-        elif not check_password_hash(user.password, password):
-            error = "Incorrect password."
-
-        if error is None:
-            return "Login Successful", 200
-        else:
-            return error, 418
-
-    ## TODO: Return a login page
-    # return "Login Page not yet implemented", 501
-    return render_template("login.html")
