@@ -35,5 +35,11 @@ jobs:
       - name: Print out deployment status
         run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && docker-compose ps'
 
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Verify deployment
+        run: sleep 5 && bash prod-test.sh
+      
       - name: Discord Notifications
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful" 
