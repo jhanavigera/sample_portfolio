@@ -19,9 +19,9 @@ username="$RANDOM"
 password="$RANDOM"
 wrongpassword="wrongpw"
 
-homepage () { curl -s https://pod-3-3-1-demo.duckdns.org; }
-register () { curl -s -d "username=$1&password=$2" -X POST https://pod-3-3-1-demo.duckdns.org/register; }
-login () { curl -s -d "username=$1&password=$2" -X POST https://pod-3-3-1-demo.duckdns.org/login; }
+homepage () { curl -s https://jhanavi-sample.duckdns.org/; }
+register () { curl -s -d "username=$1&password=$2" -X POST https://jhanavi-sample.duckdns.org/register; }
+login () { curl -s -d "username=$1&password=$2" -X POST https://jhanavi-sample.duckdns.org/login; }
 
 assert "$(homepage)" "Wei He"
 assert "$(register "" "$password")" "Username is required."
