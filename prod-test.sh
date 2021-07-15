@@ -23,7 +23,7 @@ homepage () { curl -s https://jhanavi-sample.duckdns.org/; }
 register () { curl -s -d "username=$1&password=$2" -X POST https://jhanavi-sample.duckdns.org/register; }
 login () { curl -s -d "username=$1&password=$2" -X POST https://jhanavi-sample.duckdns.org/login; }
 
-assert "$(homepage)" "Wei He"
+assert "$(homepage)" "Jhanavi Gera"
 assert "$(register "" "$password")" "Username is required."
 assert "$(register "$username" "")" "Password is required."
 assert "$(register "$username" "$password")" "User ${username} created successfully"
