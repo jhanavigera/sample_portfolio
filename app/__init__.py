@@ -72,8 +72,8 @@ def about():
 
 @app.route("/health")
 def health():
-    return render_template("health.html", title="Health"), 200
-
+    user_count = UserModel.query.all().count()
+    return f"Works, we have {user_count} users"
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
