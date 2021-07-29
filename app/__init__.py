@@ -14,17 +14,13 @@ from dotenv import load_dotenv
 # from . import db
 # login and registartion end points
 from werkzeug.security import check_password_hash, generate_password_hash
-
-# from app.db import get_db
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 
 load_dotenv()
 app = Flask(__name__)
-# app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
 app.secret_key = "development identification key"
-# db.init_app(app)
 app.config[
     "SQLALCHEMY_DATABASE_URI"
 ] = "postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}".format(
@@ -72,8 +68,11 @@ def about():
 
 @app.route("/health")
 def health():
-    user_count = UserModel.query.all().count()
-    return f"Works, we have {user_count} users"
+    jhan = UserModel.query.filter_by(username="jhan").first()
+    has_jhan = "yes" if jhan is not None else "no"
+    return f"Works, has_wei: {has_jhan}"
+
+
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
@@ -110,7 +109,6 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        # db = get_db()
         error = None
 
         if not username:
@@ -138,7 +136,6 @@ def login():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        # db = get_db()
         error = None
         user = UserModel.query.filter_by(username=username).first()
 
